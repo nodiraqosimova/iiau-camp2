@@ -1,0 +1,265 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block main %}
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="d-flex align-items-center">
+        <div class="container text-center position-relative" data-aos="fade-in" data-aos-delay="200">
+            <h1>O'zbekiston Xalqaro Islom Akademiyasi</h1>
+            <h2>oromgohi web-sayti</h2>
+            <a href="/queue" class="btn-get-started scrollto">Navbatga yozilish</a>
+        </div>
+    </section><!-- End Hero -->
+
+    <main id="main">
+        <!-- ======= About Section ======= -->
+        <section id="about" class="about">
+            <div class="container">
+
+                <div class="row content">
+                    <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
+                        <h2>Oromgoh</h2>
+                        <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assum perenda sruen jonee
+                            trave</h3>
+                    </div>
+                    <div class="col-lg-6 pt-4 pt-lg-0" data-aos="fade-left" data-aos-delay="200">
+                        <p>
+                            Akademiya professor-o‘qituvchilarining, shuningdek tashrif buyuruvchilarning yozgi ta’tilda
+                            maroqli dam olishini ta’minlash maqsadida Toshkent viloyati Bo‘stonliq tumani Gʻazalkent suv
+                            ombori yonida so‘lim tabiat qo‘ynida O‘zbekiton xalqaro islom akademiyasi Oromgohi barpo
+                            etilgan.
+                        </p>
+                        <ul>
+                            <li><i class="ri-check-double-line"></i> Shinam</li>
+                            <li><i class="ri-check-double-line"></i> Salqin va musaffo havo</li>
+                        </ul>
+                        <p class="font-italic">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore
+                            magna aliqua.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section><!-- End About Section -->
+
+        <!-- ======= Counts Section ======= -->
+        <section id="counts" class="counts">
+            <div class="container">
+
+                <div class="row counters">
+
+                    <div class="col-lg-3 col-6 text-center">
+                        <span data-toggle="counter-up">{{ requested }}</span>
+                        <p>So'rov yuborgan talabalar</p>
+                    </div>
+
+                    <div class="col-lg-3 col-6 text-center">
+                        <span data-toggle="counter-up">{{ accepted }}</span>
+                        <p>So'rovi qabul qilingan talabalar</p>
+                    </div>
+
+                    <div class="col-lg-3 col-6 text-center">
+                        <span data-toggle="counter-up">{{ students }}</span>
+                        <p>Tizimdagi talabalar</p>
+                    </div>
+
+                    <div class="col-lg-3 col-6 text-center">
+                        <span data-toggle="counter-up">{{ students }}</span>
+                        <p>Umumiy talabalar soni</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section><!-- End Counts Section -->
+
+        <!-- ======= Why Us Section ======= -->
+        <section id="why-us" class="why-us">
+        </section><!-- End Why Us Section -->
+
+        <!-- ======= Cta Section ======= -->
+        <section id="cta" class="cta">
+            <div class="container">
+                <div class="text-center py-5" data-aos="zoom-in">
+                </div>
+
+            </div>
+        </section><!-- End Cta Section -->
+
+        <!-- ======= Services Section ======= -->
+<!--        <section id="services" class="services section-bg">-->
+<!--            <div class="container">-->
+
+<!--                <div class="row">-->
+<!--                    <div class="col-lg-4">-->
+<!--                        <div class="section-title" data-aos="fade-right">-->
+<!--                            <h2>Services</h2>-->
+<!--                            <p>Magnam dolores commodi suscipit nemo qui impedit suscipit alias ea. Quia fugiat sit in-->
+<!--                                iste officiis commodi quidem hic quas.</p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="col-lg-8">-->
+<!--                        <div class="row">-->
+<!--                            <div class="col-md-6 d-flex align-items-stretch">-->
+<!--                                <div class="icon-box" data-aos="zoom-in" data-aos-delay="100">-->
+<!--                                    <div class="icon"><i class="bx bxl-dribbble"></i></div>-->
+<!--                                    <h4><a href="">Lorem Ipsum</a></h4>-->
+<!--                                    <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>-->
+<!--                                </div>-->
+<!--                            </div>-->
+
+<!--                            <div class="col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">-->
+<!--                                <div class="icon-box" data-aos="zoom-in" data-aos-delay="200">-->
+<!--                                    <div class="icon"><i class="bx bx-file"></i></div>-->
+<!--                                    <h4><a href="">Sed ut perspiciatis</a></h4>-->
+<!--                                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>-->
+<!--                                </div>-->
+<!--                            </div>-->
+
+<!--                            <div class="col-md-6 d-flex align-items-stretch mt-4">-->
+<!--                                <div class="icon-box" data-aos="zoom-in" data-aos-delay="300">-->
+<!--                                    <div class="icon"><i class="bx bx-tachometer"></i></div>-->
+<!--                                    <h4><a href="">Magni Dolores</a></h4>-->
+<!--                                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>-->
+<!--                                </div>-->
+<!--                            </div>-->
+
+<!--                            <div class="col-md-6 d-flex align-items-stretch mt-4">-->
+<!--                                <div class="icon-box" data-aos="zoom-in" data-aos-delay="400">-->
+<!--                                    <div class="icon"><i class="bx bx-world"></i></div>-->
+<!--                                    <h4><a href="">Nemo Enim</a></h4>-->
+<!--                                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>-->
+<!--                                </div>-->
+<!--                            </div>-->
+
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--            </div>-->
+<!--        </section>&lt;!&ndash; End Services Section &ndash;&gt;-->
+
+        <!-- ======= Portfolio Section ======= -->
+        <section id="galery" class="portfolio">
+            <div class="container">
+
+                <div class="section-title" data-aos="fade-left">
+                    <h2>Galereya</h2>
+                    <p>Oromgoh fotogalereya</p>
+                </div>
+                <div class="row">
+                    <div class="owl-carousel owl-theme owl-loaded">
+                        <div class="owl-stage-outer">
+                            <div class="owl-stage">
+                                {% for galery in galeries %}
+                                    <div class="owl-item">
+                                        <img src="{{ galery.image.url }}" class="card-img" alt="">
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        </div>
+                </div>
+            </div>
+        </section><!-- End Portfolio Section -->
+
+        <!-- ======= Contact Section ======= -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4" data-aos="fade-right">
+                        <div class="section-title">
+                            <h2>BIZNING MANZIL</h2>
+                            <p>Toshkent, O'zbekiston 100011
+                                Abdulla Q. №11</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
+                        <iframe style="border:0; width: 100%; height: 270px;"
+                                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621"
+                                frameborder="0" allowfullscreen></iframe>
+                        <div class="info mt-4">
+                            <i class="icofont-google-map"></i>
+                            <h4>Lokatsiya:</h4>
+                            <p>Toshkent, O'zbekiston 100011
+                                Abdulla Q. №11</p>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 mt-4">
+                                <div class="info">
+                                    <i class="icofont-envelope"></i>
+                                    <h4>Email:</h4>
+                                    <p>info@iiau.uz</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="info w-100 mt-4">
+                                    <i class="icofont-phone"></i>
+                                    <h4>Telefon:</h4>
+                                    <p>(71) 244-94-64</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <form action="forms/contact.php" method="post" role="form" class="php-email-form mt-4">
+                            <div class="form-row">
+                                <div class="col-md-6 form-group">
+                                    <input type="text" name="name" class="form-control" id="name"
+                                           placeholder="Ismingiz" data-rule="minlen:4"
+                                           data-msg="Please enter at least 4 chars"/>
+                                    <div class="validate"></div>
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <input type="email" class="form-control" name="email" id="email"
+                                           placeholder="Pochtangiz" data-rule="email"
+                                           data-msg="Please enter a valid email"/>
+                                    <div class="validate"></div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="subject" id="subject"
+                                       placeholder="Mavzu" data-rule="minlen:4"
+                                       data-msg="Please enter at least 8 chars of subject"/>
+                                <div class="validate"></div>
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" name="message" rows="5" data-rule="required"
+                                          data-msg="Please write something for us" placeholder="Xabar"></textarea>
+                                <div class="validate"></div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="loading">Loading</div>
+                                <div class="error-message"></div>
+                                <div class="sent-message">Your message has been sent. Thank you!</div>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit">Xabar yuborish</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </section><!-- End Contact Section -->
+
+    </main><!-- End #main -->
+{% endblock %}
+{% block footer %}
+    <script>
+        $(document).ready(function () {
+            $('.owl-carousel').owlCarousel({
+                animateOut: 'slideOutDown',
+                animateIn: 'flipInX',
+                items: 2,
+                margin: 4,
+                center: false,
+                stagePadding: 10,
+                smartSpeed: 450,
+                dots: true,
+                nav:true,
+            });
+        })
+    </script>
+{% endblock %}

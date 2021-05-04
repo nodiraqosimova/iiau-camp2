@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="uz">
+
+{% include 'layout/head.html' %}
+<body>
+{% include 'layout/header.html' %}
+{% block main %}
+    <main id="main">
+
+        <!-- ======= Breadcrumbs ======= -->
+        <section class="breadcrumbs">
+            <div class="container">
+
+                <div class="d-flex justify-content-between align-items-center">
+                    <h2>Oromgoh haqida</h2>
+                    <ol>
+                        <li><a href="#">Bosh sahifa</a></li>
+                        <li>Oromgoh haqida</li>
+                    </ol>
+                </div>
+
+            </div>
+        </section><!-- End Breadcrumbs -->
+
+        <section class="inner-page">
+            <div class="container">
+                {% block content %}
+                    <h1>hello world</h1>
+                {% endblock %}
+            </div>
+        </section>
+
+    </main><!-- End #main -->
+{% endblock %}
+{% include 'layout/footer.html' %}
+{% include 'layout/foot.html' %}
+{% block footer %}
+{% endblock %}
+</body>
+
+</html>

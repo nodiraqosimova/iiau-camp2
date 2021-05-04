@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load crispy_forms_filters %}
+{% block main %}
+    <main id="main">
+
+        <!-- ======= Breadcrumbs ======= -->
+        <section class="breadcrumbs">
+            <div class="container">
+
+                <div class="d-flex justify-content-between align-items-center">
+                    <h2>Kirish</h2>
+                    <ol>
+                        <li><a href="#">Bosh sahifa</a></li>
+                        <li>Kirish</li>
+                    </ol>
+                </div>
+
+            </div>
+        </section><!-- End Breadcrumbs -->
+
+        <section class="inner-page">
+            <div class="container px-2">
+                <div class="row">
+                    <div class="col-md-6 shadow py-5 my-5 m-auto">
+                        <form action="" method="post">
+                            {% csrf_token %}
+                            <div>
+                                {{ form.username|as_crispy_field }}
+                            </div>
+                            <div>{{ form.password|as_crispy_field }}</div>
+                            <input type="submit" value="Kirish" class="btn form-control"
+                                   style="background: #16a085; color: white">
+                        </form>
+                        {% if form.non_field_errors %}
+                            <div class="alert alert-danger mt-3 text-center" role="alert">
+                                <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span
+                                        class="sr-only">Close</span></button>
+                                <p>Username yoki parol xato kiritildi</p>
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main><!-- End #main -->
+{% endblock %}

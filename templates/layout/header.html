@@ -1,0 +1,39 @@
+{% load static %}
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container">
+        <div class="header-container d-flex align-items-center">
+            <div class="logo">
+                <h4><a class="text-light" href="/"><i class="fas fa-campground"></i> <span>IIAU Camp</span></a></h4>
+            </div>
+
+            <nav class="nav-menu d-none d-lg-block text-center m-auto">
+                <ul>
+                    <li><a href="/#hero">Bosh sahifa</a></li>
+                    <li><a href="/#about">Oromgoh haqida</a></li>
+                    <li><a href="/#galery">Galereya</a></li>
+                    <li><a href="/news">Yangiliklar</a></li>
+                    <li><a href="/#contact">Bog'lanish</a></li>
+                    {% if user.is_authenticated %}
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#" id="navbarDropdown" role="button"
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-user mr-1"></i>
+                                {{ user }}
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="/control">Navbat tizimi</a>
+                                <a class="dropdown-item" href="/logout"> <i class="fas fa-quit"></i>Chiqish</a>
+                            </div>
+                        </li>
+                    {% else %}
+                        <li><a href="/login">Login</a></li>
+                        <li class="get-started"><a href="{% url 'main:queue' %}">Navbatga yozilish <i
+                                class="fas fa-chevron-circle-right"></i></a></li>
+                    {% endif %}
+                </ul>
+            </nav><!-- .nav-menu -->
+        </div><!-- End Header Container -->
+    </div>
+</header>
+<!-- End Header -->

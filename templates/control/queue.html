@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block main %}
+    <main id="main">
+
+        <!-- ======= Breadcrumbs ======= -->
+        <section class="breadcrumbs">
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h2>So'rov yuborgan talabalar</h2>
+                    <ol>
+                        <li><a href="/">Bosh sahifa</a></li>
+                        <li><a href="{% url 'main:queue_control' %}">Navbat tizimi</a></li>
+                        <li>So'rov yuborgan talabalar</li>
+                    </ol>
+                </div>
+
+            </div>
+        </section><!-- End Breadcrumbs -->
+
+        <section class="inner-page">
+            <div class="container px-2">
+                <div class="row">
+                    <div class="col-md-12 m-auto">
+                    {% if queues %}
+                        <form enctype="multipart/form-data" method="post">
+                            {% csrf_token %}
+                            {{ form.media }}
+                            <div class="form-group">
+                                <div class="card card-bordered mt-3">
+                                    <div class="card-header">
+                                        <b>Talabalar</b>
+                                    </div>
+
+                                    <div class="card-body">
+                                        <table class="table table-bordered">
+                                            <thead>
+                                            <tr>
+                                                <th scope="col">ID</th>
+                                                <th scope="col">Talaba nomi</th>
+                                                <th scope="col">Guruhi</th>
+                                                <th scope="col">Fakulteti</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            {% for queue in queues %}
+                                                <tr>
+                                                    <td>
+                                                        <div class="custom-control custom-switch">
+                                                            <input type="checkbox" name="queues"
+                                                                   class="custom-control-input"
+                                                                   id="customSwitch{{ forloop.counter }}"
+                                                                   value="{{ queue.id }}">
+                                                            <label class="custom-control-label"
+                                                                   for="customSwitch{{ forloop.counter }}">{{ queue.id }}</label>
+                                                        </div>
+                                                    </td>
+                                                    <td>{{ queue.student }}</td>
+                                                    <td>{{ queue.student.group }}</td>
+                                                    <td>{{ queue.student.group.department.faculty }}</td>
+                                                </tr>
+                                            {% endfor %}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="float-right"><a type="button" class="btn btn-secondary mr-3"
+                                                        href="{% url 'main:queue_control' %}">Bekor qilish</a>
+                                <button type="submit" class="btn btn-info">Saqlash</button>
+                            </div>
+                        </form>
+                    {% else %}
+                        <div class="alert alert-info text-center font-weight-bold">Ma'lumot topilmadi</div>
+                    {% endif %}
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+{% endblock %}
+{% block footer %}
+{% endblock %}

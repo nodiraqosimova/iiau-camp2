@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block main %}
+    <main id="main">
+
+        <!-- ======= Breadcrumbs ======= -->
+        <section class="breadcrumbs">
+            <div class="container">
+
+                <div class="d-flex justify-content-between align-items-center">
+                    <h2>Tizimdagi talabalar</h2>
+                    <ol>
+                        <li><a href="/">Bosh sahifa</a></li>
+                        <li><a href="{% url 'main:queue_control' %}">Navbat tizimi</a></li>
+                        <li>Tizimdagi talabalar</li>
+                    </ol>
+                </div>
+
+            </div>
+        </section><!-- End Breadcrumbs -->
+
+        <section class="inner-page">
+            <div class="container px-2">
+                <div class="row">
+                    <div class="col-md-12 m-auto">
+                        {% if students %}
+                            <div class="card card-bordered mt-3">
+                                <div class="card-header">
+                                    <b>Talabalar</b>
+                                </div>
+
+                                <div class="card-body">
+                                    <table class="table table-bordered">
+                                        <thead>
+                                        <tr>
+                                            <th scope="col">ID</th>
+                                            <th scope="col">Talaba nomi</th>
+                                            <th scope="col">Guruhi</th>
+                                            <th scope="col">Fakulteti</th>
+                                            <th>Qo'shilgan vaqti</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        {% for student in students %}
+                                            <tr>
+                                                <td>
+                                                    {{ student.id }}
+                                                </td>
+                                                <td>{{ student }}</td>
+                                                <td>{{ student.group }}</td>
+                                                <td>{{ student.group.department.faculty }}</td>
+                                                <td>{{ student.created_at }}</td>
+                                            </tr>
+                                        {% endfor %}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        {% else %}
+                            <div class="alert alert-info text-center font-weight-bold">Ma'lumot topilmadi</div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+{% endblock %}

@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% block main %}
+    <main id="main">
+
+        <!-- ======= Breadcrumbs ======= -->
+        <section class="breadcrumbs">
+            <div class="container">
+
+                <div class="d-flex justify-content-between align-items-center">
+                    <h2>Navbat tizimi</h2>
+                    <ol>
+                        <li><a href="/">Bosh sahifa</a></li>
+                        <li>Navbat tizimi</li>
+                    </ol>
+                </div>
+
+            </div>
+        </section><!-- End Breadcrumbs -->
+
+        <section class="inner-page">
+            <div class="container px-2 my-4">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="shadow bg-secondary text-light m-2 px-2 py-5 text-center">
+                            <h3>So'rov yuborgan talabalar</h3>
+                            <h1>{{ requested_students }}</h1>
+                            <a class="btn btn-lg btn-outline-light mt-2" href="{% url 'main:requested_students' %}">Ko'rish <i class="fas fa-chevron-circle-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="shadow bg-info text-light m-2 px-2 py-5 text-center">
+                            <h3>So'rovi qabul qilingan talabalar</h3>
+                            <h1>{{ accepted_students }}</h1>
+                            <a class="btn btn-lg btn-outline-light mt-2" href="{% url 'main:accepted_students' %}">Ko'rish <i class="fas fa-chevron-circle-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mt-4">
+                        <div class="shadow bg-success text-light m-2 px-2 py-5 text-center">
+                            <h3>Tizimdagi talabalar</h3>
+                            <h1>{{ students }}</h1>
+                            <a class="btn btn-lg btn-outline-light mt-2" href="{% url 'main:students_in_system' %}">Ko'rish <i class="fas fa-chevron-circle-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mt-4">
+                        <div class="shadow bg-light text-dark m-2 px-2 py-5 text-center">
+                            <h3>Umumiy talabalar soni</h3>
+                            <h1>{{ students }}</h1>
+                            <a class="btn btn-lg btn-outline-dark mt-2" href="{% url 'main:students_in_system' %}">Ko'rish <i class="fas fa-chevron-circle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+{% endblock %}
